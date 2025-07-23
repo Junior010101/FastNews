@@ -1,0 +1,89 @@
+# === DJANGO ===
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# Local settings
+.env
+.env.*
+
+# Django media/static (gerados, não versionados)
+media/
+staticfiles/
+static/
+
+# Migrations (opcional ignorar, mas só se for gerar sempre do zero)
+# */migrations/
+# !*/migrations/__init__.py
+
+# Python virtualenv
+venv/
+.venv/
+ENV/
+env/
+
+# === ANGULAR ===
+
+node_modules/
+dist/
+build/
+.angular/
+.angular.cache/
+
+# Angular local envs
+*.local
+.env
+.env.*
+
+
+# === GERAL ===
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs e lixos
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+*.rej
+
+# Testes e coverage
+coverage/
+htmlcov/
+.nyc_output/
+test-results/
+coverage-final.json
+
+# pacotes
+*.tgz
+*.tar.gz
+
+# Prettier/eslint
+.prettiercache
+.eslintcache
+
+# pyproject tools
+*.egg-info/
+*.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
