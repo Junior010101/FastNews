@@ -1,11 +1,7 @@
 # === DJANGO ===
-
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *.pyo
-
-# Django stuff:
 *.log
 *.pot
 *.pyc
@@ -13,38 +9,33 @@ __pycache__/
 *.sqlite3
 db.sqlite3
 
-# Local settings
-.env
-.env.*
-
-# Django media/static (gerados, não versionados)
-media/
-staticfiles/
-static/
-
-# Migrations (opcional ignorar, mas só se for gerar sempre do zero)
-# */migrations/
-# !*/migrations/__init__.py
-
-# Python virtualenv
-venv/
+# Virtualenv
 .venv/
-ENV/
+venv/
 env/
+ENV/
 
-# === ANGULAR ===
+# Django media/static
+media/
+static/
+staticfiles/
 
-node_modules/
-dist/
-build/
-.angular/
-.angular.cache/
+# Migrations (exceto o __init__.py)
+**/migrations/
+!**/migrations/__init__.py
 
-# Angular local envs
-*.local
+# Arquivos de configuração local
 .env
 .env.*
 
+# === ANGULAR (dentro de site/) ===
+site/node_modules/
+site/dist/
+site/build/
+site/.angular/
+site/.angular/cache/
+site/tmp/
+site/out-tsc/
 
 # === GERAL ===
 
@@ -54,11 +45,11 @@ build/
 *.sublime-workspace
 *.sublime-project
 
-# OS files
+# Arquivos do sistema
 .DS_Store
 Thumbs.db
 
-# Logs e lixos
+# Lixo em geral
 *.log
 *.bak
 *.tmp
@@ -72,18 +63,15 @@ coverage/
 htmlcov/
 .nyc_output/
 test-results/
-coverage-final.json
 
-# pacotes
+# Pacotes e build cache
 *.tgz
 *.tar.gz
-
-# Prettier/eslint
-.prettiercache
-.eslintcache
-
-# pyproject tools
 *.egg-info/
 *.eggs/
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Ferramentas JS
+.prettiercache
+.eslintcache
