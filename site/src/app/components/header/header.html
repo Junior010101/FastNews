@@ -1,31 +1,67 @@
-<header class="header-bg p-3">
-  <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
-    <!-- Logo -->
-    <div class="header-logo me-4">
-      FastNews<br />Blog
-    </div>
-
-    <!-- Search bar -->
-    <form class="d-flex flex-grow-1 mx-3" role="search" style="max-width: 500px;">
-      <input
-        class="form-control search-input"
-        type="search"
-        placeholder="Pesquisar..."
-        aria-label="Pesquisar"
-      />
-      <button class="btn search-btn" type="submit">
-        <i class="bi bi-search text-white"></i>
-      </button>
-    </form>
-
-    <!-- Buttons -->
-    <div class="d-flex gap-2">
-      <button type="button" class="btn header-btn d-flex align-items-center gap-1">
-        <i class="bi bi-people"></i> Sobre nós
-      </button>
-      <button type="button" class="btn header-btn d-flex align-items-center gap-1">
-        <i class="bi bi-envelope"></i> Contato
-      </button>
-    </div>
+<app-topbar></app-topbar>
+<header
+  class="bg-custom-red text-white d-flex flex-wrap align-items-center justify-content-between p-3 px-md-4 sticky-top shadow"
+>
+  <div class="d-flex flex-column logo">
+    <span class="jomhuria fs-79">FastNews</span>
+    <span class="jomhuria fs-68">Blog</span>
   </div>
+
+  <div class="d-flex flex-grow-1 mx-3" style="max-width: 600px">
+    <label for="search" class="visually-hidden">Pesquisar notícias</label>
+    <input
+      id="search"
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()"
+      placeholder="Pesquisar..."
+      type="search"
+      class="form-control rounded-start text-dark"
+    />
+    <button
+      aria-label="Buscar"
+      (click)="onSearch()"
+      class="btn bg-custom-red-dark text-white rounded-end"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="me-1"
+        width="16"
+        height="16"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          cx="11"
+          cy="11"
+          r="7"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+        />
+        <line
+          x1="21"
+          y1="21"
+          x2="16.65"
+          y2="16.65"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <nav class="d-flex gap-2 mt-3 mt-md-0">
+    <button
+      (click)="onAbout()"
+      class="btn bg-custom-red-dark text-white fw-semibold text-sm"
+    >
+      Sobre nós
+    </button>
+    <button
+      (click)="onContact()"
+      class="btn bg-custom-red-dark text-white fw-semibold text-sm"
+    >
+      Contato
+    </button>
+  </nav>
 </header>

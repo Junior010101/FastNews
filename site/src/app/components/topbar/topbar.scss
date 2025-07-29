@@ -1,0 +1,25 @@
+.bg-custom-red {
+  background-color: #b91c1c; // Tailwind bg-red-700
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
