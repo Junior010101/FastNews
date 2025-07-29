@@ -1,6 +1,6 @@
-.main-header {
-    background-color: blue;
-}
-body {
-    background-color: black;
+:host {
+    display: block;
+    background-color: white;
+    height: 100dvh;
+    width: 100%;
 }

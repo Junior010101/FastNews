@@ -1,3 +1,31 @@
-<header class="main-header">
+<header class="header-bg p-3">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
+    <!-- Logo -->
+    <div class="header-logo me-4">
+      FastNews<br />Blog
+    </div>
 
+    <!-- Search bar -->
+    <form class="d-flex flex-grow-1 mx-3" role="search" style="max-width: 500px;">
+      <input
+        class="form-control search-input"
+        type="search"
+        placeholder="Pesquisar..."
+        aria-label="Pesquisar"
+      />
+      <button class="btn search-btn" type="submit">
+        <i class="bi bi-search text-white"></i>
+      </button>
+    </form>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-2">
+      <button type="button" class="btn header-btn d-flex align-items-center gap-1">
+        <i class="bi bi-people"></i> Sobre nós
+      </button>
+      <button type="button" class="btn header-btn d-flex align-items-center gap-1">
+        <i class="bi bi-envelope"></i> Contato
+      </button>
+    </div>
+  </div>
 </header>
