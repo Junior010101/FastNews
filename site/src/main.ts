@@ -6,6 +6,6 @@ import { App } from './app/app';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
-registerLocaleData(localePt); // 📌 Registra o locale 'pt-BR'
+registerLocaleData(localePt); // 📌 Registra a linguagem local em 'pt-BR'
 
 bootstrapApplication(App, appConfig).catch((err) => console.error(err));

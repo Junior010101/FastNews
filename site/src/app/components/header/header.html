@@ -1,67 +1,21 @@
 <app-topbar></app-topbar>
-<header
-  class="bg-custom-red text-white d-flex flex-wrap align-items-center justify-content-between p-3 px-md-4 sticky-top shadow"
->
-  <div class="d-flex flex-column logo">
-    <span class="jomhuria fs-79">FastNews</span>
-    <span class="jomhuria fs-68">Blog</span>
-  </div>
-
-  <div class="d-flex flex-grow-1 mx-3" style="max-width: 600px">
-    <label for="search" class="visually-hidden">Pesquisar notícias</label>
-    <input
-      id="search"
-      [(ngModel)]="searchTerm"
-      (input)="onSearch()"
-      placeholder="Pesquisar..."
-      type="search"
-      class="form-control rounded-start text-dark"
-    />
-    <button
-      aria-label="Buscar"
-      (click)="onSearch()"
-      class="btn bg-custom-red-dark text-white rounded-end"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="me-1"
-        width="16"
-        height="16"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          cx="11"
-          cy="11"
-          r="7"
-          stroke="currentColor"
-          stroke-width="2"
-          fill="none"
-        />
-        <line
-          x1="21"
-          y1="21"
-          x2="16.65"
-          y2="16.65"
-          stroke="currentColor"
-          stroke-width="2"
-        />
-      </svg>
-    </button>
-  </div>
-
-  <nav class="d-flex gap-2 mt-3 mt-md-0">
-    <button
-      (click)="onAbout()"
-      class="btn bg-custom-red-dark text-white fw-semibold text-sm"
-    >
-      Sobre nós
-    </button>
-    <button
-      (click)="onContact()"
-      class="btn bg-custom-red-dark text-white fw-semibold text-sm"
-    >
-      Contato
-    </button>
+<header>
+  <nav class="navbar navbar-expand-lg shadow">
+    <div class="d-flex flex-column logo ms-5">
+      <span class="jomhuria FastNews user-select-none">FastNews</span>
+      <span class="jomhuria Blog user-select-none">Blog</span>
+    </div>
+    <div class="d-flex row">
+      <input type="text" class="form-control pesquisa rounded-pill border border-0" placeholder="Pesquisar..." aria-label="Pesquisa" aria-describedby="button-addon2">
+      <button class="btn btn-outline-light botao rounded-5 border border-0 align-self-center" type="button" id="button-addon2">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+      <button class="btn btn-primary bg-custom-red border border-0" type="submit">
+        <i class="bi bi-people"> Sobre nós</i>
+      </button>
+      <button class="btn btn-primary bg-custom-red border border-0" type="submit">
+        <i class="bi bi-telephone"> Contato</i>
+      </button>
   </nav>
 </header>

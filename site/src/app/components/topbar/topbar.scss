@@ -1,5 +1,5 @@
 .bg-custom-red {
-  background-color: #b91c1c; // Tailwind bg-red-700
+  background-color: #b91c1c;
 }
 
 .hover-underline:hover {
@@ -15,10 +15,12 @@
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.2;
   }

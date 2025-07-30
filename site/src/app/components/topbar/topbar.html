@@ -1,14 +1,14 @@
 <div
-  class="bg-custom-red text-light small px-3 py-1 d-flex justify-content-between align-items-center user-select-none fw-semibold"
+  class="bg-custom-red text-light small px-4 py-1 d-flex justify-content-between align-items-center user-select-none fw-semibold"
 >
-  <div>
+  <div class="ms-4">
     <span>
       {{ currentDate | date : "EEEE, d 'de' MMMM 'de' y" }} -
       {{ currentTime }} | Recife: 28ºC
     </span>
   </div>
-  <div class="d-flex align-items-center gap-1">
-    <span class="live-dot me-1"></span>
+  <div class="d-flex align-items-center gap-1 me-4">
+    <span class="live-dot"></span>
     <a href="#" class="text-light text-decoration-none hover-underline"
       >AO VIVO</a
     >

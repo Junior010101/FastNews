@@ -1,27 +1,46 @@
 .bg-custom-red {
-  background-color: #dc2626; // Tailwind bg-red-600
+  background-color: #b91c1c;
 }
 
-.bg-custom-red-dark {
-  background-color: #991b1b; // Tailwind bg-red-800
+.bg-custom-red:hover {
+  background-color: #E53E3E;
+}
 
-  &:hover {
-    background-color: #7f1d1d; // Tailwind bg-red-900
+header {
+  display: block;
+  background-image: linear-gradient(to right, #C41E3A, #E53E3E);
+
+  .logo {
+    width: 200px;
+    height: 120px;
+    margin-top: -30px;
+
+    .FastNews {
+      color: white;
+      font-size: 79px;
+    }
+
+    .Blog {
+      color: white;
+      font-size: 68px;
+    }
+
+    span:last-of-type {
+      margin-top: -70px;
+      margin-left: auto;
+      padding: 0;
+    }
   }
-}
-.tight-stack > span {
-  margin-bottom: 0.1rem; /* pouco espaço entre os spans */
-  margin-top: 0;
-}
 
-span:last-of-type {
-  margin-top: -70px;
-  margin-left: auto;
-  padding: 0;
-}
-.logo {
-  width: 180px;
-  height: 120px;
-  margin-top: -30px;
-  margin-left: 30px;
+  .pesquisa {
+    height: 48px;
+    width: 100%;
+  }
+
+  .botao {
+    margin-left: -57px;
+    background-color: #C41E3A;
+    height: 41px;
+    width: 52px;
+  }
 }
