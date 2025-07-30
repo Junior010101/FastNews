@@ -3,12 +3,12 @@
 }
 
 .bg-custom-red:hover {
-  background-color: #E53E3E;
+  background-color: #e53e3e;
 }
 
 header {
   display: block;
-  background-image: linear-gradient(to right, #C41E3A, #E53E3E);
+  background-image: linear-gradient(to right, #c41e3a, #e53e3e);
 
   .logo {
     width: 200px;
@@ -32,6 +32,10 @@ header {
     }
   }
 
+  .boxinput {
+    width: 30%;
+  }
+
   .pesquisa {
     height: 48px;
     width: 100%;
@@ -39,7 +43,7 @@ header {
 
   .botao {
     margin-left: -57px;
-    background-color: #C41E3A;
+    background-color: #c41e3a;
     height: 41px;
     width: 52px;
   }
