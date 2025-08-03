@@ -1,4 +1,10 @@
 <app-header></app-header>
-<section class="ms-5 me-5 mt-5">
-  <app-imageslider></app-imageslider>
+<section class="ms-5 me-5 mt-5 d-flex gap-4">
+  <app-imageslider #slider></app-imageslider>
+
+  <app-imagespreview
+    [slides]="slider.slides"
+    [currentSlideIndex]="slider.currentSlideIndex"
+    [setSlide]="slider.setSlide.bind(slider)"
+  ></app-imagespreview>
 </section>

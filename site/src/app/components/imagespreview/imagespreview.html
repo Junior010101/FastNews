@@ -1,0 +1,11 @@
+<div class="d-flex flex-column gap-3">
+  <div
+    *ngFor="let slide of slides; let i = index"
+    class="preview-image rounded overflow-hidden border"
+    [class.active]="i === currentSlideIndex"
+    (click)="setSlide(i)"
+    style="cursor: pointer;"
+  >
+    <img [src]="slide.image" class="w-100" alt="preview" />
+  </div>
+</div>
