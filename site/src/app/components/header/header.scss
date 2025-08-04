@@ -6,6 +6,14 @@
   background-color: #e53e3e;
 }
 
+.amassado {
+  background: url('https://i.pinimg.com/564x/55/5c/d9/555cd94e62b3f150424e6562fd87e70b.jpg');
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 header {
   display: block;
   background-image: linear-gradient(to right, #c41e3a, #e53e3e);
