@@ -5,16 +5,23 @@
     </h4>
     <div
       *ngFor="let slide of slides; let i = index"
-      class="preview-image rounded overflow-hidden border mt-2 shadow"
+      class="preview-image rounded overflow-hidden mt-2"
       [class.active]="i === currentSlideIndex"
       (click)="setSlide(i)"
       style="cursor: pointer"
     >
-      <div
-        class="rounded-circle Numero d-flex justify-content-center align-items-center text-light"
-      >
-        {{ i + 1 }}
+      <div class="d-flex">
+        <div
+          class="rounded-circle Numero d-flex justify-content-center align-items-center text-light mt-2 ms-2 fw-normal"
+        >
+          {{ i + 1 }}
+        </div>
+        <p class="mt-2 ms-2 fw-semibold text-break">{{ slides[i].title }}</p>
       </div>
+      <p class="d-flex">
+        <i class="bi bi-calendar-week ms-3 fs-6 fw-light"> Há 0 hora</i>
+        <i class="bi bi-eye ms-3"> 0 visualizações</i>
+      </p>
     </div>
   </div>
 </div>

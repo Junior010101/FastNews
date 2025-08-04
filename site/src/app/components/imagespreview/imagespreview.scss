@@ -1,36 +1,61 @@
 .preview {
-  height: 488px;
-  width: 328px;
+  width: clamp(200px, 20vw, 400px);
+  aspect-ratio: 830 / 1500; /* remove height fixa */
   background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  overflow: hidden;
 }
 
 .preview-image {
-  width: 120px;
-  height: 80px;
+  width: 93%;
+  aspect-ratio: 6 / 2; /* em vez de width/height fixos */
   overflow: hidden;
   border: 2px solid transparent;
   transition: border 0.3s, transform 0.3s;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
+.preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.preview-image.active {
+  border-color: #ffc107;
+  transform: scale(1.05);
+}
+
+/* Ícone 🔥 */
 .bi-fire {
-    background-image: linear-gradient(to bottom, red, yellow);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-.MaisLidas {
-  background-image: linear-gradient(to right, #c41e3a, #e53e3e);
+  background-image: linear-gradient(to bottom, red, yellow);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  font-size: 1.25rem;
 }
 
+/* Título “Mais Lidas” */
+.MaisLidas {
+  background-image: linear-gradient(to right, #c41e3a, #e57b3e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Linha decorativa */
 .ComLinha {
   position: relative;
   display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .ComLinha::after {
@@ -40,24 +65,41 @@
   left: 0;
   width: 33%;
   height: 2px;
-  background-image: linear-gradient(to right, #c41e3a, #FF6B35);
+  background-image: linear-gradient(to right, #c41e3a, #ff6b35);
+  border-radius: 1px;
 }
 
 .Numero {
+  width: 32px;
+  height: 32px;
   background-image: linear-gradient(to right, #c41e3a, #e53e3e);
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+  border-radius: 50%;
+  color: white;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  user-select: none;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  position: relative;
 }
 
-.preview-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.preview-image {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.preview-image.active {
-  border-color: #ffc107;
-  /* amarelinho só pra dar destaque */
-  transform: scale(1.05);
+.preview-image:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* 80% da largura do item */
+  height: 1px; /* espessura da linha */
+  background-color: #888888;
 }

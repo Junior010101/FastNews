@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './imagespreview.html',
-  styleUrls: ['./imagespreview.scss']
+  styleUrls: ['./imagespreview.scss'],
 })
 export class Imagespreview {
   @Input() slides: any[] = [];
